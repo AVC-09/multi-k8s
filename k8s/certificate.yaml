@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: superk8s-nl-tls
+spec:
+  secretName: superk8s-nl
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: superk8s.nl
+  dnsNames:
+    - superk8s.nl
+    - www.superk8s.nl
